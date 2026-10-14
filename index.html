@@ -14,7 +14,7 @@
   .lead { color:var(--sub); margin:0 0 20px; font-size:.9rem; }
   button { font:inherit; font-size:.95rem; padding:10px 16px; border-radius:10px; border:1px solid var(--line); background:#fff; cursor:pointer; color:inherit; }
   button.on { background:var(--ink); color:#fff; border-color:var(--ink); }
-  .list { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px; }
+  .list { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; margin-bottom:16px; }
   .item { text-align:left; padding:14px 16px; }
   .item small { display:block; color:var(--sub); margin-top:2px; }
   .item.active { border-color:var(--accent); box-shadow:0 0 0 2px var(--accent) inset; }
@@ -43,6 +43,7 @@
 const VIDEOS = [
   { id:'zenkei', title:'全景ver', sub:'校舎から全体を撮影', src:'media/zenkei.mp4' },
   { id:'chorei', title:'朝礼台ver', sub:'朝礼台から撮影', src:'media/chorei.mp4' },
+  { id:'v1014', title:'1014版', sub:'10/14 撮影', src:'media/v1014.mp4' },
 ];
 const video = document.getElementById('video'), list = document.getElementById('list');
 let rate = 1, cur;
